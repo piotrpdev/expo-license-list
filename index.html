@@ -76,12 +76,12 @@
 </code></pre>
 				<p>Then use like this:</p>
 				<pre><code class="language-js"><span class="hljs-keyword">import</span> { openBrowserAsync } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;expo-web-browser&quot;</span>;
-<span class="hljs-keyword">import</span> { LicenseList, getLicensesFromJSON, LicensesListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;expo-license-list&quot;</span>
+<span class="hljs-keyword">import</span> { LicenseList, getLicensesFromJSON, LicenseListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;expo-license-list&quot;</span>
 
 &lt;LicenseList
   data={getLicensesFromJSON(licenses)}
   renderItem={<span class="hljs-function">(<span class="hljs-params">{ item }</span>) =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">LicensesListItem</span> <span class="hljs-attr">onPress</span>=<span class="hljs-string">{(url)</span> =&gt;</span> openBrowserAsync(url)} {...item} /&gt;</span>
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">LicenseListItem</span> <span class="hljs-attr">onPress</span>=<span class="hljs-string">{(url)</span> =&gt;</span> openBrowserAsync(url)} {...item} /&gt;</span>
   )}
 /&gt;
 </code></pre>
@@ -119,7 +119,7 @@
 						<a href="globals.html#licenselist" class="tsd-kind-icon">License<wbr>List</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#licenseslistitem" class="tsd-kind-icon">Licenses<wbr>List<wbr>Item</a>
+						<a href="globals.html#licenselistitem" class="tsd-kind-icon">License<wbr>List<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#extractnamefromgithuburl" class="tsd-kind-icon">extract<wbr>Name<wbr>From<wbr>Github<wbr>Url</a>
