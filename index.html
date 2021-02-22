@@ -68,7 +68,26 @@
 					<h1>expo-license-list</h1>
 				</a>
 				<p>A group of components used to display the licenses your expo app is using</p>
-				<p>ToDo:</p>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>Generate the license JSON data using the following script (uses <a href="https://www.npmjs.com/package/npm-license-crawler"><code>npm-license-crawler</code></a>):</p>
+				<pre><code class="language-bash">npm-license-crawler -onlyDirectDependencies -json ./assets/licenses.json
+</code></pre>
+				<p>Then use like this:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> { openBrowserAsync } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;expo-web-browser&quot;</span>;
+<span class="hljs-keyword">import</span> { LicenseList, getLicensesFromJSON, LicensesListItem } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;expo-license-list&quot;</span>
+
+&lt;LicenseList
+  data={getLicensesFromJSON(licenses)}
+  renderItem={<span class="hljs-function">(<span class="hljs-params">{ item }</span>) =&gt;</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">LicensesListItem</span> <span class="hljs-attr">onPress</span>=<span class="hljs-string">{(url)</span> =&gt;</span> openBrowserAsync(url)} {...item} /&gt;</span>
+  )}
+/&gt;
+</code></pre>
+				<a href="#todo" id="todo" style="color: inherit; text-decoration: none;">
+					<h2>ToDo</h2>
+				</a>
 				<ul>
 					<li><input disabled="" type="checkbox"> Add tests.</li>
 				</ul>
