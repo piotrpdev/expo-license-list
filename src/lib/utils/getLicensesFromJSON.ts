@@ -30,7 +30,7 @@ export type jsonData = {
  * `resolveJsonModule` in tsconfig must be set to `true` for this to work.
  * @param jsonData The parsed JSON license data.
  */
-const getLicensesFromJSON = (
+export const getLicensesFromJSON = (
   jsonData: Record<string, jsonData>
 ): LicensesType[] => <LicensesType[]>Object.entries(jsonData).map(
     ([_key, value]) => {
@@ -66,5 +66,3 @@ const getLicensesFromJSON = (
       };
     }
   );
-
-export default getLicensesFromJSON;
