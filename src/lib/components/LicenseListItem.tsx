@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
  *
  * @param onPress - The function to call when the List.Item is pressed.
  */
-const LicensesListItem = ({
+const LicenseListItem = ({
   image,
   username,
   name,
@@ -81,4 +81,4 @@ const LicensesListItem = ({
   );
 };
 
-export default LicensesListItem;
+export default LicenseListItem;

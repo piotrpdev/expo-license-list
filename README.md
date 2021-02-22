@@ -14,12 +14,12 @@ Then use like this:
 
 ```js
 import { openBrowserAsync } from "expo-web-browser";
-import { LicenseList, getLicensesFromJSON, LicensesListItem } from "expo-license-list"
+import { LicenseList, getLicensesFromJSON, LicenseListItem } from "expo-license-list"
 
 <LicenseList
   data={getLicensesFromJSON(licenses)}
   renderItem={({ item }) => (
-    <LicensesListItem onPress={(url) => openBrowserAsync(url)} {...item} />
+    <LicenseListItem onPress={(url) => openBrowserAsync(url)} {...item} />
   )}
 />
 ```
