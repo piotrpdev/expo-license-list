@@ -2,9 +2,9 @@
   "name": "expo-license-list",
   "version": "1.0.5",
   "description": "A group of react native paper components used to display the licenses your expo app is using",
-  "main": "build/main/index.js",
-  "typings": "build/main/index.d.ts",
-  "module": "build/module/index.js",
+  "main": "dist/index.cjs.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
   "repository": "https://github.com/RazerMoon/expo-license-list",
   "license": "MIT",
   "keywords": [
@@ -19,6 +19,7 @@
     "typescript"
   ],
   "scripts": {
+    "roll": "rollup -c",
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
@@ -50,7 +51,8 @@
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "react": "^17.0.1",
     "react-native": "0.63.3",
     "react-native-paper": "^4.7.2"
@@ -63,7 +65,7 @@
     "@types/react-native": "^0.63.50",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
-    "ava": "^3.12.1",
+    "ava": "^3.15.0",
     "codecov": "^3.5.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.8.0",
@@ -80,26 +82,23 @@
     "nyc": "^15.1.0",
     "open-cli": "^6.0.1",
     "prettier": "^2.1.1",
+    "rollup": "^2.39.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "standard-version": "^9.0.0",
     "ts-node": "^9.0.0",
     "typedoc": "^0.19.0",
     "typescript": "^4.0.2"
   },
   "files": [
-    "build/main",
-    "build/module",
-    "!**/*.spec.*",
-    "!**/*.json",
-    "CHANGELOG.md",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "ava": {
     "failFast": true,
     "timeout": "60s",
     "typescript": {
       "rewritePaths": {
-        "src/": "build/main/"
+        "src/": "dist/"
       }
     },
     "files": [
