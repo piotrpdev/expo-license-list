@@ -1,6 +1,6 @@
 {
   "name": "expo-license-list",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A group of react native paper components used to display the licenses your expo app is using",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
