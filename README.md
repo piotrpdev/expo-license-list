@@ -1,5 +1,7 @@
 # expo-license-list [![](https://img.shields.io/npm/v/expo-license-list.svg)](https://www.npmjs.com/package/expo-license-list)
 
+<img width="200" src=".github/example.jpg">
+
 A group of components used to display the licenses your expo app is using
 
 [Snack](https://snack.expo.io/@razermoon/expo-licenses-list)
