@@ -8,7 +8,15 @@ A group of components used to display the licenses your expo app is using
 
 ## Usage
 
-Generate the license JSON data using the following script (uses [`npm-license-crawler`](https://www.npmjs.com/package/npm-license-crawler)):
+Install using npm or yarn:
+```
+npm i expo-license-list
+```
+```
+yarn add expo-license-list
+```
+
+Generate the license JSON data using the following script (you need [`npm-license-crawler`](https://www.npmjs.com/package/npm-license-crawler)):
 
 ```bash
 npm-license-crawler -onlyDirectDependencies -json ./assets/licenses.json
@@ -41,6 +49,8 @@ export default function App() {
 }
 
 ```
+
+See the [documentation](https://razermoon.github.io/expo-license-list/) for more technical info.
 
 ## ToDo
 
