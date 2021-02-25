@@ -25,7 +25,7 @@ import {
 
 import { openBrowserAsync } from "expo-web-browser";
 
-import licenses from './licenses.json';
+import licenses from './assets/licenses.json';
 
 export default function App() {
   return (
